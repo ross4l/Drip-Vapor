@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drip Vapor | Tienda de Vapes en Guatemala | Envíos Express</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <style>
+        /* Estilos CSS */
+        body {
+            font-family: 'Tahoma', 'Geneva', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #0108BD;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .hero {
+            background-image: url('hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 150px 20px;
+            text-align: center;
+            color: #000;
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+        }
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+        .hero .cta-btn {
+            display: inline-block;
+            background-color: #0108BD;
+            color: #fff;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease;
+        }
+        .hero .cta-btn:hover {
+            background-color: #0108BD;
+        }
+        .product-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .product {
+            background-color: #fff;
+            padding: 30px;
+            margin: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            max-width: 300px;
+        }
+        .product h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #0108BD;
+        }
+        .product img {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .product p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #000;
+        }
+        .product .buy-btn {
+            display: inline-block;
+            background-color: #0108BD;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+        }
+        .product .buy-btn:hover {
+            background-color: #0108BD;
+        }
+        .product select {
+            border: 2px solid #0108BD;
+            border-radius: 5px;
+            padding: 8px;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: border-color 0.3s ease;
+        }
+        .product select:hover,
+        .product select:focus {
+            border-color: #0108BD;
+        }
+        .whatsapp-link {
+            display: inline-block;
+            background-color: #25D366;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        footer {
+            background-color: #0108BD;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Drip Vapor</h1>
+        <h6>DRIP VAPOR | Tienda de Vapes en Guatemala | Envíos Express</h6>
+    </header>
+
+    <section class="hero">
+        <h1>¡Haz tu compra!</h1>
+        <p>¡Sé el más cool con cada puff, comparte con tus amigos y eleva tu experiencia al siguiente nivel!.</p>
+    </section>
+
+    <div class="product-container">
+        <div class="product" id="product1">
+            <h2>Maskking High GTS Pod Kit</h2>
+            <img src="C:/Users/farag/Downloads/37446da7-4f12-e4ae-579e-797b1048b6f0.png" alt="Producto" width="200" height="200">
+            <p> </p>
+            <p>Q150.00 </p>
+            <select onchange="updateWhatsAppLink('product1', 'Maskking High GTS Pod Kit')">
+                <option value="Mango">Mango</option>
+                <option value="Fresa">Fresa</option>
+                <option value="Menta">Menta</option>
+            </select>
+            <a href="#" class="whatsapp-link" id="whatsapp-link1">Comprar por Whatsapp</a>
+        </div>
+
+        <div class="product" id="product2">
+            <h2>Maskking High GTS Pod (2 pcs)</h2>
+            <img src="C:/Users/farag/Downloads/b7e92302-186e-47bc-1484-1e3183e5a058.png" alt="Producto" width="200" height="200">
+            <p> </p>
+            <p>Q120.00 </p>
+            <select onchange="updateWhatsAppLink('product2', 'Maskking High GTS Pod (2 pcs)')">
+                <option value="Uva">Uva</option>
+                <option value="Naranja">Naranja</option>
+                <option value="Limón">Limón</option>
+            </select>
+            <a href="#" class="whatsapp-link" id="whatsapp-link2">Comprar por Whatsapp</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Drip Vapor. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Función para actualizar el enlace de WhatsApp con el sabor seleccionado
+        function updateWhatsAppLink(productId, productName) {
+            const selectedProduct = document.getElementById(productId);
+            const selectedFlavor = selectedProduct.querySelector('select').value;
+            const whatsappLink = document.getElementById(`whatsapp-link${productId.slice(-1)}`);
+            const message = encodeURIComponent(`Hola, quiero hacer un pedido del ${productName} con sabor a ${selectedFlavor}`);
+            whatsappLink.href = `https://wa.me/50247418541?text=${message}`;
+        }
+    </script>
+</body>
+</html>
